@@ -9,11 +9,11 @@ public class DBUtil {
 
 	public static String getDataFromDatabase() {
 		try {
-			Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/denmark", "roger",
-					"roger");
+			Connection con = DriverManager.getConnection("jdbc:mysql://35.185.50.205:3306/denmark", "rashmi",
+					"rashmi");
 			// here denmark is database name, roger is username and password
 			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from test");
+			ResultSet rs = stmt.executeQuery("select * from EMPLOYEES");
 			while (rs.next()) {
 				System.out.println(rs.getString(1));
 				String result=rs.getString(1);
