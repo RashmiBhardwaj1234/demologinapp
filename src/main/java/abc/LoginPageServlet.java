@@ -14,6 +14,4 @@ public class LoginPageServlet {
          request.setAttribute("result", DBUtil.getDataFromDatabase());
 		 response.sendRedirect("login.jsp");
 	}
-
-
 }
